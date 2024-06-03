@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { PortfolioPerformanceComponent } from './components/portfolio-performance/portfolio-performance.component';
@@ -59,7 +58,6 @@ import { PerformanceTableComponent } from './components/performance-table/perfor
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatCardModule,
     MatDividerModule,
     MatButtonModule
   ],
