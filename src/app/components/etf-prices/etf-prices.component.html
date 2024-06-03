@@ -1,0 +1,13 @@
+<div *ngIf="etfPricesBlobUrl" class="content-container">
+    <div class="description-container">
+        <h2>ETF Price</h2>
+        <mat-divider></mat-divider>
+        <p>Shows the price in USD of each ETF from the Portfolio between 03.05.2005 - 29.05.2024. </p>
+    </div>
+
+    <img [src]="etfPricesBlobUrl" alt="ETF prices">
+</div>
+
+<div *ngIf="!etfPricesBlobUrl" class="loading-container">
+    <mat-spinner diameter="70"></mat-spinner>
+</div>

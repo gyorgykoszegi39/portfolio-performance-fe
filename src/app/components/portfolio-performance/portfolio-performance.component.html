@@ -1,0 +1,29 @@
+<div *ngIf="monthlyPerformance && annuallyPerformance">
+
+    <div class="description-container">
+        <h2>Portfolio Performance</h2>
+        <mat-divider></mat-divider>
+        <p>The portfolio data are between 03.05.2005 and 29.05.2024. The investment started with $1,000,000 USD.</p>
+    </div>
+
+    <h2>&emsp;Monthly Portfolio Performance</h2>
+    <app-performance-table [data]="monthlyPerformance.value"></app-performance-table>
+    <img [src]="'data:image/jpeg;base64,' + this.monthlyPerformance.diagramUSD"
+        alt="Monthly Performance in USD Diagram">
+    <img [src]="'data:image/jpeg;base64,' + this.monthlyPerformance.diagramPercentage"
+        alt="Monthly Performance in % Diagram">
+
+    <mat-divider></mat-divider>
+    
+    <h2>&emsp;Annually Portfolio Performance</h2>
+    <app-performance-table [data]="annuallyPerformance.value"></app-performance-table>
+    <img [src]="'data:image/jpeg;base64,' + this.annuallyPerformance.diagramUSD"
+        alt="Annually Performance in USD Diagram">
+    <img [src]="'data:image/jpeg;base64,' + this.annuallyPerformance.diagramPercentage "
+        alt="Annually Performance in % Diagram">
+</div>
+
+
+<div *ngIf="!monthlyPerformance && !annuallyPerformance" class="loading-container">
+    <mat-spinner diameter="70"></mat-spinner>
+</div>

@@ -1,0 +1,16 @@
+<mat-form-field class="date-range-container" appearance="outline">
+    <mat-label>Display data between</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date"  [(ngModel)]="startDate">
+        <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+    </mat-date-range-input>
+    <mat-hint>dd/mm/yyyy – dd/mm/yyyy</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+<div class="checkbox-container">
+    <mat-label>ETFs</mat-label>
+    <div *ngFor="let etf of etfs">
+        <mat-checkbox [(ngModel)]="etf.selected">{{ etf.name }}</mat-checkbox>
+    </div>
+</div>

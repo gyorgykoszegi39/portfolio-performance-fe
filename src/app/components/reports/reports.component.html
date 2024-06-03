@@ -1,0 +1,20 @@
+<mat-tab-group class="tab-group">
+
+    <mat-tab label="Performance">
+        <app-portfolio-performance [filter]="filter"></app-portfolio-performance>
+    </mat-tab>
+
+    <mat-tab label="Positions Over Time">
+        <app-portfolio-value [filter]="filter"></app-portfolio-value>
+    </mat-tab>
+
+    <mat-tab label="ETF prices">
+        <app-etf-prices [filter]="filter"></app-etf-prices>
+    </mat-tab>
+
+    <mat-tab label="Risk Measures">
+        <app-risk-measures [filter]="filter"></app-risk-measures>
+    </mat-tab>
+
+
+</mat-tab-group>
