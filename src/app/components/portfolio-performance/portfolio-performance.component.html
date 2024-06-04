@@ -15,16 +15,16 @@
     <app-performance-table [data]="monthlyPerformance.value"></app-performance-table>
     <img [src]="'data:image/jpeg;base64,' + this.monthlyPerformance.lineChartUSD" class="performance-line-chart"
         alt="Monthly Performance in USD Line Chart">
-    <img [src]="'data:image/jpeg;base64,' + this.monthlyPerformance.lineChartPercentage" class="performance-line-char"
+    <img [src]="'data:image/jpeg;base64,' + this.monthlyPerformance.lineChartPercentage" class="performance-line-chart"
         alt="Monthly Performance in % Line Chart">
 
     <mat-divider></mat-divider>
 
     <h2>&emsp;Annual Portfolio Performance</h2>
     <app-performance-table [data]="annualPerformance.value"></app-performance-table>
-    <img [src]="'data:image/jpeg;base64,' + this.annualPerformance.lineChartUSD" class="performance-line-char"
+    <img [src]="'data:image/jpeg;base64,' + this.annualPerformance.lineChartUSD" class="performance-line-chart"
         alt="Annual Performance in USD Line Chart">
-    <img [src]="'data:image/jpeg;base64,' + this.annualPerformance.lineChartPercentage " class="performance-line-char"
+    <img [src]="'data:image/jpeg;base64,' + this.annualPerformance.lineChartPercentage " class="performance-line-chart"
         alt="Annual Performance in % Line Chart">
 </div>
 
