@@ -48,10 +48,10 @@ export class DataService {
     return this.http.get(`${this.baseUrl}/monthly-portfolio-performance`, { params });
   }
 
-  fetchAnnuallyPortfolioPerformance(filter: Filter): Observable<any> {
+  fetchAnnualPortfolioPerformance(filter: Filter): Observable<any> {
     const params = this.getParams(filter);
 
-    return this.http.get(`${this.baseUrl}/annually-portfolio-performance`, { params });
+    return this.http.get(`${this.baseUrl}/annual-portfolio-performance`, { params });
   }
 
   fetchRiskMeasures(filter: Filter): Observable<any> {

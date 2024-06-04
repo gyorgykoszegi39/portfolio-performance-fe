@@ -11,7 +11,7 @@ export class PortfolioPerformanceComponent implements OnChanges {
   @Input() filter!: Filter;
 
   monthlyPerformance: any;
-  annuallyPerformance: any;
+  annualPerformance: any;
 
   constructor(private dataService: DataService) { }
 
@@ -32,13 +32,13 @@ export class PortfolioPerformanceComponent implements OnChanges {
         }
       });
 
-    this.dataService.fetchAnnuallyPortfolioPerformance(this.filter)
+    this.dataService.fetchAnnualPortfolioPerformance(this.filter)
       .subscribe({
         next: content => {
-          this.annuallyPerformance = content
+          this.annualPerformance = content
         },
         error: error => {
-          console.error('Error fetching Annually PortfolioPer formance:', error);
+          console.error('Error fetching Annual PortfolioPer formance:', error);
         }
       });
   }

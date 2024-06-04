@@ -2,17 +2,17 @@
     <div class="description-container">
         <h2>Positions Value Over Time</h2>
         <mat-divider></mat-divider>
-        <p>The positions are between 03.05.2005 and 29.05.2024. The investment started with $1,000,000 USD.</p>
-        <p>The first diagram shows the position value over time of all the ETFs. The position value of an ETF is equal to the price of the ETF multiplied by the quantity of ETFs at that time. The "big" changes in the diagram are due to transactions involving the buying or selling of ETFs.</p>
-        <p>The second diagram shows the position value of the entire portfolio by summing up the values of all ETFs from the first diagram.</p>
-        <p>The third diagram illustrates the cash flow, representing the money remaining after buying or selling ETFs over time.</p>
-        <p>The last diagram combines the Position Value Over Time and Cash on Hand Over Time by adding them together.</p>
+        <p>The first line chart shows the position value over time of all the ETFs. The position value of an ETF is equal to the price of the ETF multiplied by the quantity of ETFs at a certain point time. The deviations in the line chart are due to transactions involving buying or selling ETFs.</p>
+        <p>Formula: <i>position</i><sub>𝑖</sub> = <i>price</i> <sub>𝑖</sub> x <i>quantity</i><sub>𝑖</sub>, where 𝑖 is a certain date</p>
+        <p>The second line chart shows the position value of the entire portfolio by summing up the values of all ETFs from the first line chart.</p>
+        <p>The third line chart illustrates the cash flow, representing the money remaining at hand after buying or selling ETFs over time.</p>
+        <p>The last line chart combines the position value over time and cash on hand over time by adding them together.</p>
     </div>
 
-    <img *ngIf="posValEtfBlobUrl" [src]="posValEtfBlobUrl" alt="ETF Position Value Diagram">
-    <img *ngIf="posValBlobUrl" [src]="posValBlobUrl" alt="Positions Value Diagram">
-    <img *ngIf="cashFlowBlobUrl" [src]="cashFlowBlobUrl" alt="Cash Flow Diagram">
-    <img *ngIf="combinedCashPosValBlobUrl" [src]="combinedCashPosValBlobUrl" alt="Combined Cash Flow and Positions Value Diagram">
+    <img *ngIf="posValEtfBlobUrl" [src]="posValEtfBlobUrl" alt="ETF Position Value Line Chart">
+    <img *ngIf="posValBlobUrl" [src]="posValBlobUrl" alt="Positions Value Line Chart">
+    <img *ngIf="cashFlowBlobUrl" [src]="cashFlowBlobUrl" alt="Cash Flow Line Chart">
+    <img *ngIf="combinedCashPosValBlobUrl" [src]="combinedCashPosValBlobUrl" alt="Combined Cash Flow and Positions Value Line Chart">
 </div>
 
 <div *ngIf="!posValEtfBlobUrl && !posValBlobUrl && !cashFlowBlobUrl && !combinedCashPosValBlobUrl" class="loading-container">
