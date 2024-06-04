@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Filter } from '../app.component';
+import { environment } from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  private baseUrl = 'http://127.0.0.1:8000';
+  private baseUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
   fetchETFprices(filter: Filter): Observable<Blob> {
