@@ -17,6 +17,7 @@ export class EtfPricesComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['filter']) {
+      this.etfPricesBlobUrl = "";
       this.loadETFPrices();
     }
   }

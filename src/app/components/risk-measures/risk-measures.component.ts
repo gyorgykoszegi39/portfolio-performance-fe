@@ -14,6 +14,7 @@ export class RiskMeasuresComponent implements OnChanges {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.standardDeviation = undefined;
     this.loadETFPrices();
   }
 

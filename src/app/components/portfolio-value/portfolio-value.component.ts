@@ -24,6 +24,10 @@ export class PortfolioValueComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['filter']) {
+      this.posValEtfBlobUrl = "";
+      this.posValBlobUrl = "";
+      this.cashFlowBlobUrl = "";
+      this.combinedCashPosValBlobUrl = "";
       this.loadPortfolioValue();
     }
   }

@@ -17,6 +17,8 @@ export class PortfolioPerformanceComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['filter']) {
+      this.monthlyPerformance = undefined;
+      this.annualPerformance = undefined;
       this.loadPortfolioPerformance();
     }
   }
