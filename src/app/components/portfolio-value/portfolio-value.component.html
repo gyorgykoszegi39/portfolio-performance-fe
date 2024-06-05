@@ -1,4 +1,4 @@
-<div *ngIf="posValEtfBlobUrl || posValBlobUrl || cashFlowBlobUrl || combinedCashPosValBlobUrl" class="content-container">
+<div *ngIf="posValEtfBlobUrl && posValBlobUrl && cashFlowBlobUrl && combinedCashPosValBlobUrl" class="content-container">
     <div class="description-container">
         <h2>Positions Value Over Time</h2>
         <mat-divider></mat-divider>
@@ -15,6 +15,6 @@
     <img *ngIf="combinedCashPosValBlobUrl" [src]="combinedCashPosValBlobUrl" alt="Combined Cash Flow and Positions Value Line Chart">
 </div>
 
-<div *ngIf="!posValEtfBlobUrl && !posValBlobUrl && !cashFlowBlobUrl && !combinedCashPosValBlobUrl" class="loading-container">
+<div *ngIf="!posValEtfBlobUrl || !posValBlobUrl || !cashFlowBlobUrl || !combinedCashPosValBlobUrl" class="loading-container">
     <mat-spinner diameter="70"></mat-spinner>
 </div>

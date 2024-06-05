@@ -29,6 +29,6 @@
 </div>
 
 
-<div *ngIf="!monthlyPerformance && !annualPerformance" class="loading-container">
+<div *ngIf="!monthlyPerformance || !annualPerformance" class="loading-container">
     <mat-spinner diameter="70"></mat-spinner>
 </div>
