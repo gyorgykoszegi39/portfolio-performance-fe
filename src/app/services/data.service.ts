@@ -55,7 +55,7 @@ export class DataService {
   }
 
   fetchRiskMeasures(filter: Filter): Observable<any> {
-    const params =  new HttpParams().set('excludeETFs', JSON.stringify(filter.etfs.filter(etf => !etf.selected).map(etf => etf.name)));
+    const params =  new HttpParams().set('exclude_etfs', JSON.stringify(filter.etfs.filter(etf => !etf.selected).map(etf => etf.name)));
 
     return this.http.get(`${this.baseUrl}/risk-measures`, { params });
   }
